@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Welcome Francis</title>
+		
+	</head>
+	<body>
+		<header>
+			<h1>User Profile: Francis</h1>
+			<nav>
+				<ul>
+					<li class = "selected">Home</li>
+					<li>View User Profile</li>
+					<li>Edit User Profile</li>
+				</ul>			
+			</nav>
+		</header>
+		<div class = "main">
+			<div class = "profile-pic">
+				<img src=http://lab4.example.org/user-francis.png alt="Francis' Avatar">
+			</div>
+			<div class="profile-details">
+				<div>
+					<span class="profile-detail">Username:</span> Francis
+				</div>
+				<div>
+					<span class="profile-detail">Birthday:</span> 1936-12-17
+				</div>
+			</div>
+			<div class="user-timeline">
+				<ul id="user-timeline-eventlist">
+				</ul>
+			</div>
+			<script>
+				var eventIndex = 0;
+				var events=[add_user_registration_event(new Date), get_user_event_adder("event 1 happened"), get_user_event_adder("event 2 happened"), get_user_event_adder("event 3 happened")];
+				console.log(events);
+				function delayedEventLauncher(){
+					events[eventIndex]();
+					eventIndex++;
+					if(eventIndex < events.length){
+						setTimeout(delayedEventLauncher, 2000);
+					}
+				}						
+										
+				function add_user_registration_event (event_date){
+					var liAdd = document.createElement("li");
+					date = new Date(event_date.toLocaleString());
+					liAdd.textContent = date + ": Registered";
+					var timeline = document.getElementById("user-timeline-eventlist");
+					timeline.appendChild(liAdd);
+				}
+				function get_user_event_adder (message){
+				  user_event_adder = function (){
+						var timeline = document.getElementById("user-timeline-eventlist");
+						var liAdd = document.createElement("li");
+						liAdd.textContent = message;
+						timeline.appendChild(liAdd);		
+					}
+					return user_event_adder;
+				}
+				delayedEventLauncher();
+			</script>
+		</div>
+	</body>
+</html>

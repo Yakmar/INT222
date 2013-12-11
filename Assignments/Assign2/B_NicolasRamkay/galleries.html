@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nicolas Ramkay's Blog:: Gallery</title>
+		<meta charset="utf-9">
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+
+<!--START OF THE NAVIGATION BAR-->
+	<header class="table" id="navMenu">
+		<ul class="menu-level-one">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="resume.html">Resume</a></li>
+			<li>Courses		 
+                <ul class="menu-level-two">
+				<li><a href="https://scs.senecac.on.ca/course/ibc233">IBC233</a></li>
+				<li><a href="https://scs.senecac.on.ca/course/int222">INT222</a></li>
+				<li><a href="https://scs.senecac.on.ca/course/oop344">OOP344</a></li>
+				<li><a href="https://scs.senecac.on.ca/course/dbs301">DBS301</a></li>
+				</ul>
+			</li>
+			<li>Image Gallery
+				 <ul class="menu-level-two">
+				<li><a href="galleries.html">Galleries</a></li>
+				<li><a href="gridgallery.html">Grid Gallery</a></li>
+				</ul> 
+            </li>
+			<li><a href="honesty.html">Honesty</a></li>
+			<li>Links
+				 <ul class="menu-level-two">
+				<li><a href="#">Item 1</a></li>
+				<li><a href="#">Item 2</a></li>
+				</ul> 
+			</li>
+		</ul>
+	</header>
+		
+<!--END OF THE NAVIGATION BAR-->
+<!--START OF PAGE BODY-->
+		
+		<div class="main">
+		
+			<div id="title"><p>Nicolas Ramkay's Blog</p></div>
+			
+			<div class="leftCol">
+                <h1>Interests</h1>
+                <hr />
+			Click for more:
+                <ul id="imageMenu">
+                    <li><a href=javascript:addHobby(1);><img src="images/hobby1.jpg" /></a></li>
+                    <li><a href=javascript:addHobby(2);><img src="images/hobby2.jpg" /></a></li>
+                    <li><a href=javascript:addHobby(3);><img src="images/hobby3.jpg" /></a></li>
+                    <li><a href=javascript:addHobby(4);><img src="images/hobby4.jpg" /></a></li>
+                    <li><a href=javascript:addHobby(5);><img src="images/hobby5.jpg" /></a></li>
+                </ul>
+				<!--Photo/Location/Email Link/Personal Site & other details-->
+	        </div>
+			<div id="imageDisplay">
+                <h1 id="hobbyTitle"></h1>
+                <hr />
+			        <div id="display">
+                    
+			        </div>
+				<!--Blog Post Entries-->
+		    </div>
+        </div>
+            <script>
+                function addHobby(id) {
+                    if (id === 1) {
+
+                        var title = document.getElementById("hobbyTitle");
+                        title.textContent = "Gaming"
+                        var total = 10;
+                        var imageList = document.getElementById("display");
+                        clear(imageList);
+                        for (i = 1; i < total; i++) {
+                            addImage("images/gaming" + i + ".jpg", "Gaming image", imageList);
+                        }
+                    }
+                    if (id === 2) {
+                        var title = document.getElementById("hobbyTitle");
+                        title.textContent = "Technology"
+                        var total = 10;
+                        var imageList = document.getElementById("display");
+                        clear(imageList);
+                        for (i = 1; i < total; i++) {
+                            addImage("images/tech" + i + ".jpg", "Technology image", imageList);
+                        }
+                    }
+                    if (id === 3) {
+                        var title = document.getElementById("hobbyTitle");
+                        title.textContent = "Electronic Music"
+                        var total = 10;
+                        var imageList = document.getElementById("display");
+                        clear(imageList);
+                        for (i = 1; i < total; i++) {
+                            addImage("images/edm" + i + ".jpg", "Music image", imageList);
+                        }
+                    }
+                    if (id === 4) {
+                        var title = document.getElementById("hobbyTitle");
+                        title.textContent = "Programming"
+                        var total = 10;
+                        var imageList = document.getElementById("display");
+                        clear(imageList);
+                        for (i = 1; i < total; i++) {
+                            addImage("images/prog" + i + ".jpg", "Programming image", imageList);
+                        }
+                    }
+                    if (id === 5) {
+                        var title = document.getElementById("hobbyTitle");
+                        title.textContent = "esports"
+                        var total = 10;
+                        var imageList = document.getElementById("display");
+                        clear(imageList);
+                        for (i = 1; i < total; i++) {
+                            addImage("images/esp" + i + ".jpg", "ESports image", imageList);
+                        }
+                    }
+                }
+
+                function addImage(src, alt, parent) {
+                    var img = document.createElement("img");
+                    img.src = src;
+                    img.alt = alt;
+                    parent.appendChild(img);
+                }
+
+                function addImageWithLink(src, alt, parent) {
+                    var link = document.createElement("a");
+                    var img = document.createElement("img");
+                    img.src = src;
+                    img.alt = alt;
+                    link.href = src;
+                    link.appendChild(img);
+                    parent.appendChild(link);
+                }
+
+                function clear(parent) {
+                    if (parent.hasChildNodes()) {
+                        while (parent.childNodes.length >= 1) {
+                            parent.removeChild(parent.firstChild);
+                        }
+                    }
+                }
+
+                addHobby(1);
+            </script>
+		
+	</body>
+	<footer>
+			<div class="footer">
+				<a href="https://scs.senecac.on.ca/"><img src="images/ICTLogo.png" alt="ICT LOGO" /></a>
+			</div>
+	</footer>
+	
+</html>

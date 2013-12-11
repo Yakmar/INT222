@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nicolas Ramkay's Blog::Grid Gallery</title>
+		<meta charset="utf-9">
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<!--START OF THE NAVIGATION BAR-->
+	<header class="table" id="navMenu">
+		<ul class="menu-level-one">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="resume.html">Resume</a></li>
+			<li>Courses		 
+                <ul class="menu-level-two">
+				<li><a href="https://scs.senecac.on.ca/course/ibc233">IBC233</a></li>
+				<li><a href="https://scs.senecac.on.ca/course/int222">INT222</a></li>
+				<li><a href="https://scs.senecac.on.ca/course/oop344">OOP344</a></li>
+				<li><a href="https://scs.senecac.on.ca/course/dbs301">DBS301</a></li>
+				</ul>
+			</li>
+			<li>Image Gallery
+				 <ul class="menu-level-two">
+				<li><a href="galleries.html">Galleries</a></li>
+				<li><a href="gridgallery.html">Grid Gallery</a></li>
+				</ul> 
+            </li>
+			<li><a href="honesty.html">Honesty</a></li>
+			<li>Links
+				 <ul class="menu-level-two">
+				<li><a href="#">Item 1</a></li>
+				<li><a href="#">Item 2</a></li>
+				</ul> 
+			</li>
+		</ul>
+	</header>
+		
+<!--END OF THE NAVIGATION BAR-->
+<!--START OF PAGE BODY-->
+		
+		<div class="main">
+		
+			<div id="title"><p>Nicolas Ramkay's Blog</p></div>
+			
+			<div id ="gridGallery">
+			<h1>Grid Gallery</h1>
+            <hr />
+				<!--SCRIPT WILL BE ADDED BY JAVASCRIPT-->
+			</div>
+			
+		</div>
+        <!--START OF JAVASCRIPT-->
+		<script>
+		    var gallery = document.getElementById("gridGallery");
+		    for (i = 1; i < 10; i++)
+		    {
+		        addImageWithLink("images/gaming" + i + ".jpg", "gaming", gallery);
+		        addImageWithLink("images/tech" + i + ".jpg", "Technology", gallery);
+		        addImageWithLink("images/edm" + i + ".jpg", "Music", gallery);
+		        addImageWithLink("images/prog" + i + ".jpg", "Programming", gallery);
+		        addImageWithLink("images/esp" + i + ".jpg", "E-Sports", gallery);
+		    }
+
+
+
+		    function addImageWithLink(src, alt, parent) {
+		        var link = document.createElement("a");
+		        var img = document.createElement("img");
+		        img.src = src;
+		        img.alt = alt;
+		        link.href = src;
+		        link.appendChild(img);
+		        parent.appendChild(link);
+		    }
+
+		    function clear(parent) {
+		        if (parent.hasChildNodes()) {
+		            while (parent.childNodes.length >= 1) {
+		                parent.removeChild(parent.firstChild);
+		            }
+		        }
+		    }
+		</script>
+        <!--END OF SCRIPT-->
+	</body>
+	<footer>
+			<div class="footer">
+				<a href="https://scs.senecac.on.ca/"><img src="images/ICTLogo.png" alt="ICT LOGO" /></a>
+			</div>
+	</footer>
+	
+</html>

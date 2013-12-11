@@ -1,0 +1,199 @@
+/*TABLE SETTINGS STARTS*/
+.table
+{
+    display:table;
+	margin: auto;
+    border:1px solid;
+}
+.tableRow
+{
+	display:table-row;
+    width:auto;
+
+}
+.cell
+{
+    display:table-column;
+    float:left;
+    margin:auto;
+    padding:23px;
+}
+.center {
+    text-align:center;
+}
+/*TABLE SETTINGS ENDS*/
+
+/*NAVIGATION MENU STARTS*/
+#navMenu 
+{
+    background:#333333;
+    color:#CCCCCC;
+
+}
+.menu-level-one
+{
+    list-style: none;
+    margin:auto;
+    padding: 0 0 0 10px;
+    display: block;
+    line-height:30px;
+}
+    .menu-level-one > li 
+    {
+        width: 100px;
+        position: relative;
+        float: left;
+    }
+    .menu-level-one li:hover > ul 
+    {
+        display: block;
+    }
+    .menu-level-one li:hover 
+    {
+        background: #333333;
+    }
+.menu-level-two
+{
+    position: absolute;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+    color: #3D003D;
+    display: none;
+}
+.menu-level-two > li
+{
+    padding: 0 0 0 10px;
+	position: relative;
+    background:#333333;
+}
+.menu-level-two > li:hover {background: #333311;}
+/*NAVIGATION MENU ENDS*/
+
+/*GALLERY.HTML SPECIFIC TAGS*/
+#imageMenu  img
+{
+    width: 100%;
+}
+#imageDisplay 
+{
+    margin:1%;
+    padding:1%;
+    width: 69%;
+    background:#333333;
+    color:#CCCCCC;
+    float:right;
+}
+    #imageDisplay img 
+    {
+        width: 24%;
+        margin: 0.5%;
+        padding: 0.5%;
+    }
+    #imageDisplay h1 
+    {
+        text-align: center;
+    }
+/*GALLERY.HTML TAGS END*/
+
+/*GRIDGALLERY.HTML SPECIFIC TAGS BEGIN*/
+#gridGallery 
+{
+    width: 96%;
+    margin: 1%;
+    padding: 1%;  
+    background:#333333;
+    color:#CCCCCC;
+}
+    #gridGallery h1 
+    {
+        text-align:center;
+    }
+    #gridGallery img 
+    {
+        width: 23%;
+        margin: 0.5%;
+        padding: 0.5%;
+    }
+/*GRIDGALLERY.HTML TAGS END*/
+
+/*GENERAL USE CLASSES AND TAGS*/
+#title
+{
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px;
+    clear:left;
+    color:#E6E6E6;
+}
+#title p
+{
+	text-align: center;
+	font-size: 300%;
+}
+.main
+{
+	margin:auto;
+}
+.main p 
+{
+    color:#CCCCCC;
+}
+.leftCol
+{
+    margin:1%;
+	padding:1%;
+	width:21%;
+	float:left;
+    background:#333333;
+    color:#CCCCCC;
+}
+    .leftCol img 
+    {
+        width:99%;
+    }
+.leftColInv
+{
+    margin:1%;
+	padding:1%;
+	width:21%;
+	float:left;
+}
+.centerCol
+{
+	margin:1%;
+	padding:1%;
+	width:46%;
+	float:left;
+    background:#333333;
+    color:#CCCCCC;
+}	
+.rightCol
+{
+	margin:1%;
+	padding:1%;
+	width:21%;
+	float:left;
+    background:#333333;
+    color:#CCCCCC;
+}
+.rightCol
+{
+	margin:1%;
+	padding:1%;
+	width:21%;
+	float:left;
+}
+footer
+{
+	clear:left;
+}
+a:visited {
+    color:#FFB2B2;
+}
+a:link {
+    color:#99C2FF;
+}
+body {
+    background: #0A0A0A;
+}

@@ -1,0 +1,41 @@
+body 
+{
+    background:#0A0A0A;
+    color:#CCCCCC;
+}
+#title h1
+{
+    text-decoration:underline;
+}
+#table 
+{
+    display:table;
+    margin:auto;
+    border: 2px solid white;
+}
+
+#basic 
+{
+    display:table-row;
+    background:#333333;
+    margin:auto;
+}
+
+#education {
+    display:table-row;
+    background:#333333;
+    padding:4px;
+}
+
+#work 
+{
+    display:table-row;
+    background:#333333;
+    padding:4px;
+}
+#attachments 
+{
+    display:table-row;
+    background:#333333;
+    padding:4px;
+}

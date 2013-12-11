@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Coop Program Application Form</title>
+		<meta charset="utf-9">
+		<link href="styles.css" rel="stylesheet">
+	</head>
+	<body>
+        <div id="table">
+        <div class="tableRow" id="title"><h1>Coop Program Application Form</h1></div>
+		<p>Fields with a * are required.</p>
+        <form id="coop_app" action="http://formpost.azurewebsites.net/home/test" onsubmit="return addEmail();" method="post">
+			<div id="basic">
+            <h3>Basic Information</h3>
+			Full Name: <input type="text" name="fullname" required/>*<br />
+			Student ID: <input type="text" name="studentid"  pattern="[0-9]{9}" required/>*(9 digits)<br />
+			Learn ID: <input type="text" name="LearnID" required/>*<br />
+			Seneca Email: <input type="hidden" name="email" /><br />
+			Alt Email: <input type="email" name="altemail" pattern="..*@..*\...*"/><br />
+			Phone Number: <input type="tel" name="phone" required/>*<br />
+			Address: <input type="text" name="address" required/>*<br />
+			City: <input type="text" name="city" required/>*<br />
+			Province: 	<select required="required">
+							<option value="alberta">Alberta</option>
+							<option value="britishcolumbia">British Columbia</option>
+							<option value="manitoba">Manitoba</option>
+							<option value="newbrunswick">New Brunswick</option>
+							<option value="nfldlab">New Foundland & Labrador</option>
+							<option value="novascotia">Nova Scotia</option>
+							<option value="ontario">Ontario</option>
+							<option value="pei">Prince Edward Island</option>
+							<option value="quebec">Quebec</option>
+							<option value="saskatchewan">Saskatchewan</option>
+							<option value="northwestterr">Northwest Territories</option>
+							<option value="yukon">Yukon</option>
+							<option value="nunavut">Nunavut</option>
+						</select>*
+			<hr />
+            </div>
+			<div id="education">
+			<h3>Education</h3>
+			School: <input type="text" name="school" required>*<br />
+			Program: <input type="text" name="program" required>*<br />
+			Education Level: <select name="level">
+					<option value="Technical Diploma">Technical Diploma</option>
+					<option value="College Diploma">College Diploma</option>
+					<option value="Bachelor's Degree">Bachelor's Degree</option>
+					<option value="Master's Degree">Master's Degree</option>
+					<option value="Others">Other's</option>
+				</select>
+				
+			<br />
+			Education Status:<br />
+			 	<input type="radio" name="eduStatus" value="Graduated">Graduated<br />
+				<input type="radio" name="eduStatus" value="Currently Enrolled">Currently Enrolled<br />
+				<input type="radio" name="eduStatus" value="Did not Graduate">Did not Graduate<br />
+			Graduation Date: <input type="date" name="gradDate">
+			<hr />
+            </div>
+			<div id="work">
+			<h3>Work Experience</h3>
+			Employer: <input type="text" name="employer"><br />
+			Job Title: <input type="text" name="jTitle"><br />
+			Job Duty: <input type="text" size="6" name="jDuty"><br />
+			Years Worked: <input type="number" name="yearsWorked" min="0" max="20"><br />
+			<hr />
+			</div>
+            <div id="attachments">
+			<h3>Attachments</h3>
+			Attach File: <input type="file" name="attachment"><br />
+			
+			<hr />					
+			</div>
+			<input type="submit" value="Submit"> <input type="reset" value="Reset!">
+            <script type="text/javascript" src="assign3.js"></script>
+		</form>
+        </div>
+		
+	</body>
+</html>
